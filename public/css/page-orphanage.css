@@ -95,6 +95,7 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 2rem;
+  line-height: 1.5;
 }
 
 .open-details div {
@@ -120,3 +121,8 @@ main {
   color: #37c77f;
 }
 
+.open-on-weekends.open {
+  background: linear-gradient(149.97deg, #fcf0f4 8.13%, #ffffff 92.67%);
+  border: 1px solid #ffbcd4;
+  color: #ff999d;
+}

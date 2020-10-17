@@ -6,8 +6,12 @@ const options = {
   zoomControl: false
 };
 
+// get values from html
+const lat = document.querySelector('span[data-lat]').dataset.lat
+const lng = document.querySelector('span[data-lng]').dataset.lng
+
 //create map
-const map = L.map('mapid', options).setView([-15.5963564,-56.0935773], 15);
+const map = L.map('mapid', options).setView([lat, lng], 15);
 
 //create and add tileLayer
 L.tileLayer(
@@ -23,8 +27,9 @@ const icon = L.icon({
 });
 
 //create and add marker
+
 L
-.marker([-15.5963564,-56.0935773], { icon })
+.marker([lat, lng],{ icon })
 .addTo(map);
 
 /*image gallery */
